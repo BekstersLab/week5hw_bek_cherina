@@ -56,3 +56,12 @@ def main():
 # ensure this script runs only when executed directly, not imported
 if __name__ == "__main__":
     main()
+
+# if __name__ == "__main__":
+# checks whether file run is being run as main program or if it is being imported as a module into another program
+# __name__ represents name of current module
+# when script is run directly, Python sets the __name__ variable to "__main__"
+# if script is imported into another module __name__ is set to the name of that script/module
+# therefore, if __name__ == "__main__": checks if script is run directly
+# if true the main() function that follows it will run, playing the game
+# Contains code that you don't want to run when the file is imported as a module in another script

@@ -79,9 +79,13 @@ def main_game_logic(name):  # Pass name as an argument
         computer_choice = get_computer_choice()
         winner = determine_winner(player_choice, computer_choice)
         player_score, computer_score = update_scores(winner, player_score, computer_score)
-        print(f"Current Score: {name} {player_score} - Computer {computer_score}")
-        if winner == "draw":
-            print(f"You both chose {player_choice}, it's a draw!")
-        else:
-            print(f"{winner.capitalize()} wins this round!")
+        display_info(computer_score, name, player_choice, player_score, winner)
     return player_score, computer_score
+
+
+def display_info(computer_score, name, player_choice, player_score, winner):
+    print(f"Current Score: {name} {player_score} - Computer {computer_score}")
+    if winner == "draw":
+        print(f"You both chose {player_choice}, it's a draw!")
+    else:
+        print(f"{winner.capitalize()} wins this round!")
